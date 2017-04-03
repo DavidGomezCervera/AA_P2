@@ -217,7 +217,7 @@ class BasicAgentAA(BustersAgent):
         # path = os.getcwd() + "/Outputs/raining_implemented.arff"
 
         #SameMaps -----------------------------------------------
-        path = os.getcwd() + "/Outputs/test_sameMaps.arff"
+        path = os.getcwd() + "/Outputs/training_initial.arff"
 
         #OtherMaps ----------------------------------------------
         # path = os.getcwd() + "/Outputs/test_otherMaps.arff"
@@ -253,10 +253,10 @@ class BasicAgentAA(BustersAgent):
                 + "@ATTRIBUTE future_score NUMERIC\n" \
                 + "@ATTRIBUTE future_alive_ghosts NUMERIC\n" \
                 + "@ATTRIBUTE last_action {Stop, North, East, South, West}\n" \
-                + "@ATTRIBUTE g1_relPos {0,1,2,3,4,5,6,7,8}\n" \
-                + "@ATTRIBUTE g2_relPos {0,1,2,3,4,5,6,7,8}\n" \
-                + "@ATTRIBUTE g3_relPos {0,1,2,3,4,5,6,7,8}\n" \
-                + "@ATTRIBUTE g4_relPos {0,1,2,3,4,5,6,7,8}\n" \
+                + "@ATTRIBUTE g1_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+                + "@ATTRIBUTE g2_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+                + "@ATTRIBUTE g3_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+                + "@ATTRIBUTE g4_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
                 + "@ATTRIBUTE g1_closest {true, false}\n" \
                 + "@ATTRIBUTE g2_closest {true, false}\n" \
                 + "@ATTRIBUTE g3_closest {true, false}\n" \
@@ -352,10 +352,10 @@ class BasicAgentAA(BustersAgent):
             + "@ATTRIBUTE future_score NUMERIC\n" \
             + "@ATTRIBUTE future_alive_ghosts NUMERIC\n" \
             + "@ATTRIBUTE last_action {Stop, North, East, South, West}\n" \
-            + "@ATTRIBUTE g1_relPos {0,1,2,3,4,5,6,7,8}\n" \
-            + "@ATTRIBUTE g2_relPos {0,1,2,3,4,5,6,7,8}\n" \
-            + "@ATTRIBUTE g3_relPos {0,1,2,3,4,5,6,7,8}\n" \
-            + "@ATTRIBUTE g4_relPos {0,1,2,3,4,5,6,7,8}\n" \
+            + "@ATTRIBUTE g1_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+            + "@ATTRIBUTE g2_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+            + "@ATTRIBUTE g3_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+            + "@ATTRIBUTE g4_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
             + "@ATTRIBUTE g1_closest {true, false}\n" \
             + "@ATTRIBUTE g2_closest {true, false}\n" \
             + "@ATTRIBUTE g3_closest {true, false}\n" \
@@ -372,7 +372,7 @@ class BasicAgentAA(BustersAgent):
         # path = os.getcwd() + "/Outputs/training_implemented.arff"
 
         # SameMaps -----------------------------------------------
-        path = os.getcwd() + "/Outputs/test_sameMaps.arff"
+        path = os.getcwd() + "/Outputs/training_initial.arff"
 
         # OtherMaps ----------------------------------------------
         #path = os.getcwd() + "/Outputs/test_otherMaps.arff"
@@ -497,6 +497,10 @@ class BasicAgentAA(BustersAgent):
         for i in range(1, gameState.getNumAgents()):
 
             pos_ghost = gameState.data.agentStates[i].getPosition()
+
+            if (pos_ghost[1] < 3):
+                data = data + "-1,"
+                continue
 
             # Si el fantasma esta en la misma posicion lo indicamos como 0
             if (pos_ghost == pos_pac):
@@ -682,3 +686,37 @@ class BasicAgentAA(BustersAgent):
         self.printLineData(gameState, move)
     
         return move
+
+#Importamos la maaquina virtual de Java.
+import weka.core.jvm as jvm
+#Importamos los algoritmos de clustering.
+from weka.clusterers import Clusterer
+#IMportamos los cargadores de arff.
+from weka.core.converters import Loader
+class ClusterAgent (BustersAgent):
+
+
+    def registerInitialState(self, gameState):
+        BustersAgent.registerInitialState(self, gameState)
+        self.distancer = Distancer(gameState.data.layout, False)
+
+        #Para usar la libreria debemos usar la maquina virtual de java, JVM
+        jvm.start()
+
+        #Creamos el modelo
+        '''
+        self.cluster = Clusterer(classname="weka.clusterers.SimpleKMeans",
+                                 options=["-l", "/home/dot/Escritorio/model.model",
+                                          "-T", "/home/dot/Escritorio/Universidad/Machine Learning/practica 1/pacman/Outputs/Classification/training/training_implemented.arff"])
+        '''
+
+        loader = Loader(classname="weka.core.converters.ArffLoader")
+        data = loader.load_file("/home/dot/Escritorio/Universidad/Machine Learning/practica 1/pacman/Outputs/Classification/training/training_implemented.arff")
+
+        clusterer = Clusterer(classname="weka.clusterers.SimpleKMeans", options=["-N", "3"])
+        clusterer.build_clusterer(data)
+
+        print(clusterer)
+
+    def chooseAction(self, gameState):
+        return Directions.STOP
