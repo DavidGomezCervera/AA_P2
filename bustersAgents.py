@@ -217,7 +217,7 @@ class BasicAgentAA(BustersAgent):
         # path = os.getcwd() + "/Outputs/raining_implemented.arff"
 
         #SameMaps -----------------------------------------------
-        path = os.getcwd() + "/Outputs/training_initial.arff"
+        path = os.getcwd() + "/Outputs/training_initial_v1_1A.arff"
 
         #OtherMaps ----------------------------------------------
         # path = os.getcwd() + "/Outputs/test_otherMaps.arff"
@@ -261,7 +261,32 @@ class BasicAgentAA(BustersAgent):
                 + "@ATTRIBUTE g2_closest {true, false}\n" \
                 + "@ATTRIBUTE g3_closest {true, false}\n" \
                 + "@ATTRIBUTE g4_closest {true, false}\n" \
-                + "@ATTRIBUTE norht_best {true, false}\n" \
+                + "@ATTRIBUTE north_best {true, false}\n" \
+                + "@ATTRIBUTE east_best {true, false}\n" \
+                + "@ATTRIBUTE south_best {true, false}\n" \
+                + "@ATTRIBUTE west_best {true, false}\n" \
+                + "@ATTRIBUTE action {North, East, South, West}\n\n" \
+                + "@DATA\n"
+
+            s = "@RELATION pacman\n\n" \
+                + "@ATTRIBUTE pacx numeric\n" \
+                + "@ATTRIBUTE pacy numeric\n" \
+                + "@ATTRIBUTE legal_north {true, false}\n" \
+                + "@ATTRIBUTE legal_east {true, false}\n" \
+                + "@ATTRIBUTE legal_south {true, false}\n" \
+                + "@ATTRIBUTE legal_west {true, false}\n" \
+                + "@ATTRIBUTE g1_x NUMERIC\n" \
+                + "@ATTRIBUTE g1_y NUMERIC\n" \
+                + "@ATTRIBUTE g1_dis NUMERIC\n" \
+                + "@ATTRIBUTE num_walls NUMERIC\n" \
+                + "@ATTRIBUTE alive_ghosts NUMERIC\n" \
+                + "@ATTRIBUTE score NUMERIC\n" \
+                + "@ATTRIBUTE future_score NUMERIC\n" \
+                + "@ATTRIBUTE future_alive_ghosts NUMERIC\n" \
+                + "@ATTRIBUTE last_action {Stop, North, East, South, West}\n" \
+                + "@ATTRIBUTE g1_relPos {-1,0,1,2,3,4,5,6,7,8}\n" \
+                + "@ATTRIBUTE g1_closest {true, false}\n" \
+                + "@ATTRIBUTE north_best {true, false}\n" \
                 + "@ATTRIBUTE east_best {true, false}\n" \
                 + "@ATTRIBUTE south_best {true, false}\n" \
                 + "@ATTRIBUTE west_best {true, false}\n" \
@@ -360,7 +385,7 @@ class BasicAgentAA(BustersAgent):
             + "@ATTRIBUTE g2_closest {true, false}\n" \
             + "@ATTRIBUTE g3_closest {true, false}\n" \
             + "@ATTRIBUTE g4_closest {true, false}\n" \
-            + "@ATTRIBUTE norht_best {true, false}\n" \
+            + "@ATTRIBUTE north_best {true, false}\n" \
             + "@ATTRIBUTE east_best {true, false}\n" \
             + "@ATTRIBUTE south_best {true, false}\n" \
             + "@ATTRIBUTE west_best {true, false}\n" \
@@ -372,7 +397,7 @@ class BasicAgentAA(BustersAgent):
         # path = os.getcwd() + "/Outputs/training_implemented.arff"
 
         # SameMaps -----------------------------------------------
-        path = os.getcwd() + "/Outputs/training_initial.arff"
+        path = os.getcwd() + "/Outputs/training_initial_v1_1A.arff"
 
         # OtherMaps ----------------------------------------------
         #path = os.getcwd() + "/Outputs/test_otherMaps.arff"
@@ -691,8 +716,10 @@ class BasicAgentAA(BustersAgent):
 import weka.core.jvm as jvm
 #Importamos los algoritmos de clustering.
 from weka.clusterers import Clusterer
-#IMportamos los cargadores de arff.
+#Importamos los cargadores de arff.
 from weka.core.converters import Loader
+
+
 class ClusterAgent (BustersAgent):
 
 
@@ -700,23 +727,189 @@ class ClusterAgent (BustersAgent):
         BustersAgent.registerInitialState(self, gameState)
         self.distancer = Distancer(gameState.data.layout, False)
 
+        #Para calcular los valores de la clase en las politicas.
+        self.clusters = 8
+        self.classes = 4
+        self.classCounts = [[0 for i in range(self.classes)]for j in range(self.clusters)]
+
+        self.classIndex = 2
+        self.clusterIndex = 3
+
+        self.readInstances()
+
+        #Esto nos servira para guardar las instancias de entrenamiento.
+        self.numInstances = 52
+        self.numAttributes = 4
+        #self.instances = [[" " for i in range(self.numAttributes)] for j in range(self.numInstances)]
+        self.ins = [" " for i in range(self.numInstances)]
+
         #Para usar la libreria debemos usar la maquina virtual de java, JVM
         jvm.start()
 
         #Creamos el modelo
-        '''
-        self.cluster = Clusterer(classname="weka.clusterers.SimpleKMeans",
-                                 options=["-l", "/home/dot/Escritorio/model.model",
-                                          "-T", "/home/dot/Escritorio/Universidad/Machine Learning/practica 1/pacman/Outputs/Classification/training/training_implemented.arff"])
-        '''
-
         loader = Loader(classname="weka.core.converters.ArffLoader")
-        data = loader.load_file("/home/dot/Escritorio/Universidad/Machine Learning/practica 1/pacman/Outputs/Classification/training/training_implemented.arff")
+        data = loader.load_file("/home/dot/Escritorio/Universidad/Machine Learning/practica 2/Outputs/agent_v1_header.arff")
 
-        clusterer = Clusterer(classname="weka.clusterers.SimpleKMeans", options=["-N", "3"])
-        clusterer.build_clusterer(data)
+        self.clusterer = Clusterer(classname="weka.clusterers.SimpleKMeans", options=["-N", "8"])
+        self.clusterer.build_clusterer(data)
 
-        print(clusterer)
+        #print(self.clusterer)
+
+        #Aplicamos la politica
+        self.politicaMax()
+
+
+    def readInstances(self):
+
+        #Direccion del fichero agente (instancias sin cabecera).
+        path = os.getcwd() + "/Outputs/agent_v1.arff"
+
+        f = open(path, 'r')
+
+        index = 0
+
+        #Leemos cacda instancia
+        for line in f:
+
+            #Obtenemos los valores de los atributos (String)
+            values = line.split(",")
+
+            #Obtenemos el valor de la clase, de Norte a Oeste (0 - 3)
+            classValue = 0
+            classAtt = values[self.classIndex]
+            if (classAtt == "East"):
+                classValue = 1
+            elif (classAtt == "South"):
+                classValue = 2
+            elif (classAtt == "West"):
+                classValue = 3
+
+            #Obtenemos el valor del cluster.
+            cluster = values[self.clusterIndex]
+
+            print(cluster)
+            print(cluster[-2:])
+
+            #Incrementamos la cuenta de la clase para el cluster.
+            self.classCounts[int(cluster[-2:]) - 1][classValue] += 1
+
+            #Guardamos la instancia
+            #self.ins[index] = line
+
+
+        f.close()
+
+    #Calcula la clase mayoritaria para cada cluster
+    def politicaMax(self):
+
+        self.max = [0 for i in range(self.clusters)]
+
+        for i in range(self.clusters):
+
+            temp_max = 0
+            class_index = 0
+
+            for j in range(self.classes):
+
+                if (self.classCounts[i][j] > temp_max):
+
+                    temp_max = self.classCounts[i][j]
+                    class_index = j
+
+            self.max[i] = class_index
+            #print(class_index)
+
 
     def chooseAction(self, gameState):
-        return Directions.STOP
+
+        path = os.getcwd() + "/Outputs/newInstance.arff"
+
+        f = open(path, 'w')
+
+        data = "@RELATION pacman\n" \
+                + "@ATTRIBUTE dis NUMERIC\n" \
+                + "@ATTRIBUTE relPos {-1,0,1,2,3,4,5,6,7,8}\n\n" \
+                + "@DATA\n"
+
+
+        # Obtenemos la posicion del pacman (x,y)
+        pos_pac = gameState.data.agentStates[0].getPosition()
+
+        # Obtenemos las distancias a los fantasmas
+        for i in range(1, gameState.getNumAgents()):
+
+            # Calculmos la distancia real (mazedistance) al fantasma i
+            pos_ghost = gameState.data.agentStates[i].getPosition()
+
+            distance = self.distancer.getDistance(pos_pac, pos_ghost)
+
+            # Si la distancia es mayor a 1000 significa que el fantasma en cuestion ya ha sido comido
+            if (distance > 1000):
+                data = data + ("-1,")
+            else:
+                data = data + str(distance) + ","
+
+
+        # Obtenemos las posiciones relativas de los fantasmas con respecto del pacman
+        for i in range(1, gameState.getNumAgents()):
+
+            pos_ghost = gameState.data.agentStates[i].getPosition()
+
+            if (pos_ghost[1] < 3):
+                data = data + "-1,"
+                continue
+
+            # Si el fantasma esta en la misma posicion lo indicamos como 0
+            if (pos_ghost == pos_pac):
+                data = data + "0,"
+
+            # Determinamos las posiciones relativas
+            # {NORTH = 1, NORTH_EAST = 2, EAST = 3, SOUTH_EAST = 4, SOUTH = 5, SOUTH_WEST = 6, WEST = 7, NORTH_WEST = 8}.
+            if (pos_ghost[0] > pos_pac[0]):
+                if (pos_ghost[1] > pos_pac[1]):
+                    data = data + "2,"
+                elif (pos_ghost[1] < pos_pac[1]):
+                    data = data + "4,"
+                else:
+                    data = data + "3,"
+            elif (pos_ghost[0] < pos_pac[0]):
+                if (pos_ghost[1] > pos_pac[1]):
+                    data = data + "8,"
+                elif (pos_ghost[1] < pos_pac[1]):
+                    data = data + "6,"
+                else:
+                    data = data + "7,"
+            else:
+                if (pos_ghost[1] > pos_pac[1]):
+                    data = data + "8,"
+                else:
+                    data = data + "5,"
+
+        data = data + "\n"
+
+        f.write(data)
+
+        f.close()
+
+        loader = Loader(classname="weka.core.converters.ArffLoader")
+        newData = loader.load_file("/home/dot/Escritorio/Universidad/Machine Learning/practica 2/Outputs/newInstance.arff")
+
+        dir = 4
+        direction = Directions.STOP
+
+        for inst in newData:
+            cl = self.clusterer.cluster_instance(inst)
+            dir = self.max[cl]
+
+
+        if (dir == 0):
+            direction = Directions.NORTH
+        elif (dir == 1):
+            direction = Directions.EAST
+        elif (dir == 2):
+            direction = Directions.SOUTH
+        elif (dir == 3):
+            direction = Directions.WEST
+
+
+        return direction

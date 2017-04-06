@@ -1,0 +1,78 @@
+@RELATION pacman
+
+@ATTRIBUTE pacx numeric
+@ATTRIBUTE pacy numeric
+@ATTRIBUTE legal_north {true, false}
+@ATTRIBUTE legal_east {true, false}
+@ATTRIBUTE legal_south {true, false}
+@ATTRIBUTE legal_west {true, false}
+@ATTRIBUTE g1_x NUMERIC
+@ATTRIBUTE g1_y NUMERIC
+@ATTRIBUTE g1_dis NUMERIC
+@ATTRIBUTE num_walls NUMERIC
+@ATTRIBUTE alive_ghosts NUMERIC
+@ATTRIBUTE score NUMERIC
+@ATTRIBUTE future_score NUMERIC
+@ATTRIBUTE future_alive_ghosts NUMERIC
+@ATTRIBUTE last_action {Stop, North, East, South, West}
+@ATTRIBUTE g1_relPos {-1,0,1,2,3,4,5,6,7,8}
+@ATTRIBUTE g1_closest {true, false}
+@ATTRIBUTE north_best {true, false}
+@ATTRIBUTE east_best {true, false}
+@ATTRIBUTE south_best {true, false}
+@ATTRIBUTE west_best {true, false}
+@ATTRIBUTE action {North, East, South, West}
+
+@DATA
+1,13,false,true,true,false,4,5,11,0,1,0,-1,1,Stop,4,true,false,true,false,false,East
+2,13,false,true,true,true,4,5,10,0,1,-1,-2,1,East,4,true,false,true,false,false,East
+3,13,false,true,true,true,4,5,9,0,1,-2,-3,1,East,4,true,false,true,false,false,East
+4,13,false,true,true,true,4,5,8,0,1,-3,-4,1,East,5,true,false,false,true,false,South
+4,12,true,true,true,true,4,5,7,0,1,-4,-5,1,South,5,true,false,false,true,false,South
+4,11,true,true,true,true,4,5,6,0,1,-5,-6,1,South,5,true,false,false,true,false,South
+4,10,true,true,true,true,4,5,5,0,1,-6,-7,1,South,5,true,false,false,true,false,South
+4,9,true,true,true,true,4,5,4,0,1,-7,-8,1,South,5,true,false,false,true,false,South
+4,8,true,true,true,true,4,5,3,0,1,-8,-9,1,South,5,true,false,false,true,false,South
+4,7,true,true,true,true,4,5,2,0,1,-9,-10,1,South,5,true,false,false,true,false,South
+4,6,true,true,true,true,4,5,1,0,1,-10,89,0,South,5,true,false,false,true,false,South
+1,3,true,true,false,false,4,5,5,0,1,0,-1,1,Stop,2,true,false,true,false,false,East
+2,3,true,true,false,true,4,5,4,0,1,-1,-2,1,East,2,true,false,true,false,false,East
+3,3,true,true,false,true,4,5,3,0,1,-2,-3,1,East,2,true,false,true,false,false,East
+4,3,true,true,false,true,4,5,2,0,1,-3,-4,1,East,8,true,true,false,false,false,North
+4,4,true,true,true,true,4,5,1,0,1,-4,95,0,North,8,true,true,false,false,false,North
+17,3,true,false,false,true,4,5,15,0,1,0,-1,1,Stop,8,true,false,false,false,true,West
+16,3,true,true,false,true,4,5,14,0,1,-1,-2,1,West,8,true,false,false,false,true,West
+15,3,true,true,false,true,4,5,13,0,1,-2,-3,1,West,8,true,false,false,false,true,West
+14,3,true,true,false,true,4,5,12,0,1,-3,-4,1,West,8,true,false,false,false,true,West
+13,3,true,true,false,true,4,5,11,0,1,-4,-5,1,West,8,true,false,false,false,true,West
+12,3,true,true,false,true,4,5,10,0,1,-5,-6,1,West,8,true,false,false,false,true,West
+11,3,true,true,false,true,4,5,9,0,1,-6,-7,1,West,8,true,false,false,false,true,West
+10,3,true,true,false,true,4,5,8,0,1,-7,-8,1,West,8,true,false,false,false,true,West
+9,3,true,true,false,true,4,5,7,0,1,-8,-9,1,West,8,true,false,false,false,true,West
+8,3,true,true,false,true,4,5,6,0,1,-9,-10,1,West,8,true,false,false,false,true,West
+7,3,true,true,false,true,4,5,5,0,1,-10,-11,1,West,8,true,false,false,false,true,West
+6,3,true,true,false,true,4,5,4,0,1,-11,-12,1,West,8,true,false,false,false,true,West
+5,3,true,true,false,true,4,5,3,0,1,-12,-13,1,West,8,true,false,false,false,true,West
+4,3,true,true,false,true,4,5,2,0,1,-13,-14,1,West,8,true,true,false,false,false,North
+4,4,true,true,true,true,4,5,1,0,1,-14,85,0,North,8,true,true,false,false,false,North
+17,13,false,false,true,true,4,5,21,0,1,0,-1,1,Stop,6,true,false,false,false,true,West
+16,13,false,true,true,true,4,5,20,0,1,-1,-2,1,West,6,true,false,false,false,true,West
+15,13,false,true,true,true,4,5,19,0,1,-2,-3,1,West,6,true,false,false,false,true,West
+14,13,false,true,true,true,4,5,18,0,1,-3,-4,1,West,6,true,false,false,false,true,West
+13,13,false,true,true,true,4,5,17,0,1,-4,-5,1,West,6,true,false,false,false,true,West
+12,13,false,true,true,true,4,5,16,0,1,-5,-6,1,West,6,true,false,false,false,true,West
+11,13,false,true,true,true,4,5,15,0,1,-6,-7,1,West,6,true,false,false,false,true,West
+10,13,false,true,true,true,4,5,14,0,1,-7,-8,1,West,6,true,false,false,false,true,West
+9,13,false,true,true,true,4,5,13,0,1,-8,-9,1,West,6,true,false,false,false,true,West
+8,13,false,true,true,true,4,5,12,0,1,-9,-10,1,West,6,true,false,false,false,true,West
+7,13,false,true,true,true,4,5,11,0,1,-10,-11,1,West,6,true,false,false,false,true,West
+6,13,false,true,true,true,4,5,10,0,1,-11,-12,1,West,6,true,false,false,false,true,West
+5,13,false,true,true,true,4,5,9,0,1,-12,-13,1,West,6,true,false,false,false,true,West
+4,13,false,true,true,true,4,5,8,0,1,-13,-14,1,West,5,true,false,false,true,false,South
+4,12,true,true,true,true,4,5,7,0,1,-14,-15,1,South,5,true,false,false,true,false,South
+4,11,true,true,true,true,4,5,6,0,1,-15,-16,1,South,5,true,false,false,true,false,South
+4,10,true,true,true,true,4,5,5,0,1,-16,-17,1,South,5,true,false,false,true,false,South
+4,9,true,true,true,true,4,5,4,0,1,-17,-18,1,South,5,true,false,false,true,false,South
+4,8,true,true,true,true,4,5,3,0,1,-18,-19,1,South,5,true,false,false,true,false,South
+4,7,true,true,true,true,4,5,2,0,1,-19,-20,1,South,5,true,false,false,true,false,South
+4,6,true,true,true,true,4,5,1,0,1,-20,79,0,South,5,true,false,false,true,false,South
