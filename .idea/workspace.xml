@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc55106-d57e-4b34-8e17-0a5641eccbc3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Bash/training_initial_1A.sh" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../practica 1/pacman/Outputs/test_otherMaps_implemented.arff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../practica 1/pacman/Outputs/test_otherMaps_keyboard.arff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../practica 1/pacman/Outputs/test_sameMaps_implemented.arff" afterPath="" />
@@ -14,15 +15,60 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../practica 1/pacman/Outputs/training_implemented_imperfect.arff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../practica 1/pacman/Outputs/training_implemented_imperfect_wout_coord.arff" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../practica 1/pacman/Outputs/training_keyboard.arff" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Bash/training_initial.sh" afterPath="$PROJECT_DIR$/Bash/training_initial_v1.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Bash/training_initial_v1.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Bash/training_initial_v1_1A.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Bash/training_initial_v2.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Bash/training_initial_v3.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_dis_relPos.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_dis_relPos_norm.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_v2.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_v2_dis_relPos.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_v3.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_v3_dis_relPos.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Outputs/training_initial_v3_post.arff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/20Hunt.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/20Hunt_mod.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/bigHunt.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/bigHunt_mod.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/bigHunt_test.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/capsuleClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/classic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/classic_mod.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/classic_test.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/contestClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/mediumClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/mimapa.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/minimaxClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/newmap.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_1.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_2.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_3.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_4.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_5.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_6.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/oneHunt_7.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/openClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/openHunt.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/originalClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/sixHunt.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/smallClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/smallHunt.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/testClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/test_oneHunt.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/trappedClassic.lay" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/layouts/trickyClassic.lay" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Outputs/agent_v1.arff" afterPath="$PROJECT_DIR$/Outputs/agent_v1_1A/agent.arff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Outputs/agent_v1_header.arff" afterPath="$PROJECT_DIR$/Outputs/agent_v1_1A/agent_header.arff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Outputs/training_initial_v1_1A_dis_relPos.arff" afterPath="$PROJECT_DIR$/Outputs/agent_v1_1A/training_initial_v1_1A_dis_relPos.arff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../practica 1/pacman/.idea/misc.xml" afterPath="$PROJECT_DIR$/../practica 1/pacman/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../practica 1/pacman/.idea/pacman.iml" afterPath="$PROJECT_DIR$/../practica 1/pacman/.idea/pacman.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../practica 1/pacman/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../practica 1/pacman/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../practica 1/pacman/bustersAgents.py" afterPath="$PROJECT_DIR$/../practica 1/pacman/bustersAgents.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/practica 2.iml" afterPath="$PROJECT_DIR$/.idea/practica 2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Outputs/newInstance.arff" afterPath="$PROJECT_DIR$/Outputs/newInstance.arff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bustersAgents.py" afterPath="$PROJECT_DIR$/bustersAgents.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,18 +87,38 @@
       <file leaf-file-name="bustersAgents.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bustersAgents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="892" column="0" lean-forward="true" selection-start-line="892" selection-start-column="0" selection-end-line="892" selection-end-column="0" />
+            <state relative-caret-position="11190">
+              <caret line="751" column="16" lean-forward="false" selection-start-line="751" selection-start-column="16" selection-end-line="751" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="training_initial_v1_1A.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Bash/training_initial_v1_1A.sh">
+      <file leaf-file-name="agent_header.arff" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Outputs/agent_header.arff">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+            <state relative-caret-position="135">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_1A.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bash/test_1A.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="training_initial_1A.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bash/training_initial_1A.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -97,9 +163,22 @@
         <option value="$PROJECT_DIR$/Outputs/agent_v1.arff" />
         <option value="$PROJECT_DIR$/Outputs/newInstance.csv" />
         <option value="$PROJECT_DIR$/Outputs/newInstance.arff" />
-        <option value="$PROJECT_DIR$/bustersAgents.py" />
+        <option value="$PROJECT_DIR$/../Tutorial 4/tutorialRefuerzo/qlearningAgents.py" />
         <option value="$PROJECT_DIR$/layouts/test_oneHunt.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_5_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_6_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_7_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_8_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_9_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_10_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_11_1A.lay" />
+        <option value="$PROJECT_DIR$/layouts/oneHunt_12_1A.lay" />
+        <option value="$PROJECT_DIR$/Outputs/agent_v2_1A.arff" />
         <option value="$PROJECT_DIR$/Bash/training_initial_v1_1A.sh" />
+        <option value="$PROJECT_DIR$/Outputs/agent.arff" />
+        <option value="$PROJECT_DIR$/Bash/test_1A.sh" />
+        <option value="$PROJECT_DIR$/Bash/training_initial_1A.sh" />
+        <option value="$PROJECT_DIR$/bustersAgents.py" />
       </list>
     </option>
   </component>
@@ -127,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -150,23 +228,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Outputs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="practica 2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="practica 2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Bash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica 1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tutorial 4" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Outputs" />
       <recent name="$PROJECT_DIR$/layouts" />
       <recent name="$PROJECT_DIR$/Bash" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Outputs" />
+      <recent name="$PROJECT_DIR$/Outputs/agent_v3" />
+      <recent name="$PROJECT_DIR$/Outputs/agent_v2_1A" />
+      <recent name="$PROJECT_DIR$/Outputs/agent_v1_1A" />
+      <recent name="$PROJECT_DIR$/Outputs/MultipleAgents" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -374,87 +474,78 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
+    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v1.sh" />
+    <entry file="file://$PROJECT_DIR$/../practica 1/pacman/bustersAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="861">
+          <caret line="694" column="8" lean-forward="false" selection-start-line="694" selection-start-column="8" selection-end-line="694" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/agent_v1.arff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v1_1A.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bustersAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7605">
-          <caret line="507" column="0" lean-forward="true" selection-start-line="507" selection-start-column="0" selection-end-line="507" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial.arff">
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_2.lay" />
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_5.lay" />
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_6.lay" />
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_7.lay" />
+    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v2.sh" />
+    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v3.sh" />
+    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_post.arff" />
+    <entry file="file://$PROJECT_DIR$/Outputs/MultipleAgents/training_initial_v3_post.arff" />
+    <entry file="file://$PROJECT_DIR$/Outputs/MultipleAgents/training_initial_v3.arff" />
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_1.lay" />
+    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_v1_1A.arff">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v1.sh">
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v1_1A/training_initial_v1_1A_dis_relPos.arff">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/busters.py">
+    <entry file="file://$PROJECT_DIR$/Outputs/newInstance.csv" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd_concurrency_analyser/pydevd_thread_wrappers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2440">
-          <caret line="131" column="71" lean-forward="false" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="71" />
+        <state relative-caret-position="225">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.py">
+    <entry file="file://$PROJECT_DIR$/Outputs/newInstance.arff">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1611">
-          <caret line="499" column="28" lean-forward="true" selection-start-line="499" selection-start-column="28" selection-end-line="499" selection-end-column="28" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tutorial 4/tutorialRefuerzo/bustersAgents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1590">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tutorial 4/tutorialRefuerzo/crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2565">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tutorial 4/tutorialRefuerzo/gridworld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6450">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Tutorial 4/tutorialRefuerzo/qtable.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -465,109 +556,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_3.lay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_4.lay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial.arff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v1.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../practica 1/pacman/bustersAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="694" column="8" lean-forward="false" selection-start-line="694" selection-start-column="8" selection-end-line="694" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_2.lay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_5.lay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_6.lay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_7.lay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v2.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v3.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_post.arff" />
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_v3_post.arff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7200">
-          <caret line="480" column="27" lean-forward="false" selection-start-line="480" selection-start-column="27" selection-end-line="480" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_v3.arff">
+    <entry file="file://$PROJECT_DIR$/layouts/newmap.lay" />
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v1_1A/agent_header.arff">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_1.lay">
+    <entry file="file://$PROJECT_DIR$/../Tutorial 4/tutorialRefuerzo/qlearningAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="1020">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_4_1A.lay">
+    <entry file="file://$PROJECT_DIR$/layouts/test_oneHunt.lay" />
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v1_1A/agent.arff">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_v2_1A.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v2_1A/agent_v2_1A_header.arff" />
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v2_1A/agent_v2_1A.arff" />
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_2_1A.lay">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -578,10 +602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_2_1A.lay">
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_4_1A.lay">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="30">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -592,72 +616,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_v1_1A.arff">
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_6_1A.lay">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/training_initial_v1_1A_dis_relPos.arff">
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_7_1A.lay">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/agent_v1.arff">
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v2_1A_header.arff" />
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v2_1A.arff" />
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_5_1A.lay">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="21" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/newInstance.csv">
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_8_1A.lay">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="165">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd_concurrency_analyser/pydevd_thread_wrappers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Outputs/newInstance.arff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/test_oneHunt.lay">
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_9_1A.lay">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_10_1A.lay">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_12_1A.lay">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/oneHunt_11_1A.lay">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v3_1A/agent_header.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_v3_1A/agent.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bash/test_1A.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outputs/agent.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bustersAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="892" column="0" lean-forward="true" selection-start-line="892" selection-start-column="0" selection-end-line="892" selection-end-column="0" />
+        <state relative-caret-position="11190">
+          <caret line="751" column="16" lean-forward="false" selection-start-line="751" selection-start-column="16" selection-end-line="751" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Bash/training_initial_v1_1A.sh">
+    <entry file="file://$PROJECT_DIR$/Bash/training_initial_1A.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+        <state relative-caret-position="105">
+          <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Outputs/agent_header.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding />
         </state>
       </provider>
